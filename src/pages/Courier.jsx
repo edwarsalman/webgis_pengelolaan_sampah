@@ -123,6 +123,12 @@ export default function Courier() {
         >
           Transaksi Saya
         </button>
+        <button
+          onClick={() => setTab("pickup")}
+          style={styles.tab(tab === "pickup")}
+        >
+          📦 Pickup Sampah
+        </button>
       </div>
 
       {tab === "peta" && <Map data={data.warga} />}
@@ -215,6 +221,26 @@ export default function Courier() {
             style={{ ...styles.btn("#16a34a"), marginTop: 10 }}
           >
             Lihat Transaksi Lengkap →
+          </button>
+        </div>
+      )}
+
+      {tab === "pickup" && (
+        <div
+          style={{
+            padding: 15,
+            background: "#f0fdf4",
+            borderRadius: 8,
+            textAlign: "center",
+          }}
+        >
+          <h3>📦 Pickup Sampah</h3>
+          <p>Klik tombol di bawah untuk melakukan pickup sampah dari warga</p>
+          <button
+            onClick={() => (window.location.href = "/courier-pickup")}
+            style={{ ...styles.btn("#2563eb"), marginTop: 10 }}
+          >
+            Buka Halaman Pickup →
           </button>
         </div>
       )}
