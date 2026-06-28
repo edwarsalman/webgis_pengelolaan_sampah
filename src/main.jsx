@@ -7,6 +7,9 @@ import "leaflet/dist/leaflet.css";
 import App from "./App.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
+import WargaTransaction from "./pages/WargaTransaction.jsx";
+import CourierTransaction from "./pages/CourierTransaction.jsx";
+import TransactionReport from "./pages/TransactionReport.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -15,7 +18,10 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/warga-transaction" element={<WargaTransaction />} />
+        <Route path="/courier-transaction" element={<CourierTransaction />} />
+        <Route path="/transaction-report" element={<TransactionReport />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>
+  </StrictMode>,
 );

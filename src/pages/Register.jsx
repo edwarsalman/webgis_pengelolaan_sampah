@@ -275,7 +275,7 @@ export default function Register() {
             style={getInputStyle("role", true)}
           >
             <option value="warga">Warga</option>
-            <option value="transporter">Transporter</option>
+            <option value="courier">Courier</option>
             <option value="admin">Admin</option>
           </select>
         </div>
